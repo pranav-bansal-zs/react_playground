@@ -1,0 +1,76 @@
+/* App.css */
+.bottom_page {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.button_container {
+position: absolute;
+bottom:30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reset_button {
+  margin-bottom: 10px;
+}
+
+.reset_button button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.reset_button button:hover {
+  background-color: #0056b3;
+}
+
+.button_and_count {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.button_and_count button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button_and_count button:hover {
+  background-color: #218838;
+}
+
+.button_and_count p {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+}
+p{
+    background-color: #28a745;
+    color:White;
+    width:120px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:5px;
+}
