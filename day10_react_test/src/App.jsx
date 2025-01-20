@@ -1,5 +1,5 @@
 
-import Child from './react-test/Child';
+import Child from './Child';
 
 const App = () => {
     const data = {
