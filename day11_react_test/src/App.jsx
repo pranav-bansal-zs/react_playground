@@ -10,8 +10,8 @@ const App = () => {
     const [error,setError]=useState("")
     const handleclick = () => {
         const inputnum = inputref.current.value;
-        if(inputnum>6 || inputnum<1){
-            setError("Number should be between 1 to 6")
+        if(inputnum<2 || inputnum>12){
+            setError("Number should be between 2 and 12")
         }else{
         setError("");
         setRoll(inputnum);}
@@ -23,12 +23,9 @@ const App = () => {
             <h3 style={{color:"red"}}>{error}</h3>
                 <button className='roll-button' onClick={handleclick}>Roll</button>
             </div>
-            {error ? (
-                <div></div>
-      ) : (
         <div>
                 <Child number={roll} />
-            </div>)}
+            </div>
         </div>
     );
 };
