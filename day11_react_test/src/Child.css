@@ -10,10 +10,13 @@
     gap: 5vmin;
     border-radius: 10px;
     background-color: darksalmon;
+    position: relative;
 }
 
 img {
     width: 100px;
     height: 100px;
 }
-
+.loader{
+    position: absolute;
+}

@@ -1,4 +1,5 @@
 //create a child component which takes number as props and show only that number of boxes when entered into input box of parent and clicked Roll
+import React from 'react';
 import { useState,useRef } from 'react';
 import Child from './Child';
 import './App.css';
@@ -22,14 +23,14 @@ const App = () => {
             <h3 style={{color:"red"}}>{error}</h3>
                 <button className='roll-button' onClick={handleclick}>Roll</button>
             </div>
-            <div>
+            {error ? (
+                <div></div>
+      ) : (
+        <div>
                 <Child number={roll} />
-            </div>
+            </div>)}
         </div>
     );
 };
 
 export default App;
-
-
-
