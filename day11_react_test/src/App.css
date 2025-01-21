@@ -18,8 +18,10 @@
 
   .number-input{
     width: 200px;
-    height: 20px;
+    height: 30px;
     font-size: 20px;
+    border-radius: 10px;
+    padding-left: 10px;
 
   }
 

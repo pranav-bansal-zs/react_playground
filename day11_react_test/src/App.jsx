@@ -9,7 +9,7 @@ const App = () => {
     const [error,setError]=useState("")
     const handleclick = () => {
         const inputnum = inputref.current.value;
-        if(inputnum>6){
+        if(inputnum>6 || inputnum<1){
             setError("Number should be between 1 to 6")
         }else{
         setError("");
