@@ -1,68 +1,94 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./App.css";
-import { useState } from "react";
-import { useEffect } from "react";
 
 const align = [
-  { text: "This is button1", alignment: "left" },
-  { text: "This is Hover1", alignment: "top" },
-  { text: "This is button2", alignment: "right" },
-  { text: "This is Hover2", alignment: "left" },
-  { text: "This is button3", alignment: "top" },
-  { text: "This is Hover3", alignment: "right" },
-  { text: "This is Button4", alignment: "left" },
-  { text: "This is Hover4", alignment: "top" },
-  { text: "This is Button5", alignment: "right" },
+  { text: "This is Button 0", alignment: "left" },
+  { text: "This is Hover 1", alignment: "top" },
+  { text: "This is Button 2", alignment: "right" },
+  { text: "This is Hover 2", alignment: "left" },
+  { text: "This is Button 4", alignment: "top" },
+  { text: "This is Hover 3", alignment: "right" },
+  { text: "This is Button 5", alignment: "left" },
+  { text: "This is Hover 4", alignment: "top" },
+  { text: "This is Button 6", alignment: "right" },
 ];
+
 function App() {
+  const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarVisible((prev) => !prev);
+  };
 
   return (
     <main>
-      {Array.from({ length: 9 }).map((_, i) => (
+      {align.map((item, i) => (
         <div className="card" key={i}>
           {i % 2 === 0 ? (
-            <Button props={align[i]} num={i}/>
+            <Button props={item} num={i} toggleSidebar={toggleSidebar} />
           ) : (
-            <Hover props={align[i]} />
+            <Hover props={item} />
           )}
         </div>
       ))}
+        {isSidebarVisible && (<Sidebar setIsSidebarVisible={setIsSidebarVisible}/>)}
     </main>
   );
 }
 
 export default App;
 
-const Tooltip = ({ isclicked = false, props, children }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref=useRef();
+const Sidebar = ({setIsSidebarVisible}) => {
+  function handlesidebar(e){
+    if(e.target.id=="sidebar-div" || e.target.id=="sidebar-remove"){
+      setIsSidebarVisible(false);
+    }
+  }
+  return (
+    <div className="sidebar" id="sidebar-div" onClick={(e)=>handlesidebar(e)}>
+      <div className="sidebar-modal">
+      <button id="sidebar-remove" onClick={handlesidebar}>❌</button>
+      <div className="content">
+        <h3>HTML</h3>
+        <h4>HTML stands for HyperText Markup Language.
+          It is the standard language used to create and structure content on the web.
+          It tells the web browser how to display text, links, images, and other forms of 
+          multimedia on a webpage. HTML sets up the basic structure of a website, and then 
+          CSS and JavaScript add style and interactivity to make it look and function better.</h4>
+        </div>
+        </div>
+    </div>
+  );
+};
 
-  function handleclick(e){
-    if(ref.current && !ref.current.contains(e.target)){
+const Tooltip = ({ isclicked = false, props, toggleSidebar, children }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef();
+
+  function handleClickOutside(e) {
+    if (ref.current && !ref.current.contains(e.target)) {
       setIsVisible(false);
     }
   }
-  
-  useEffect(()=>{
-    document.addEventListener("click",handleclick);
 
-    return()=>{
-      document.removeEventListener("click",handleclick);
+  useEffect(() => {
+    if(isVisible){
+    document.addEventListener("click", handleClickOutside);}
+    else{
+      document.removeEventListener("click", handleClickOutside);
     }
-  },[])
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [isVisible]);
+
   return (
-    <div ref={ref}
+    <div
+      ref={ref}
       className={`tooltip-container ${props.alignment}`}
-      {
-        ...(isclicked
-          ? {
-              onClick:  () => setIsVisible((prev)=>!prev)
-            }
-          : {
-              onMouseOver: () => setIsVisible((prev)=>!prev),
-              onMouseOut: () => setIsVisible((prev)=>!prev),
-            })
-      }
+      onClick={isclicked ? ()=> setIsVisible((prev) => !prev) : undefined}
+      onMouseOver={!isclicked ? () => setIsVisible(true) : undefined}
+      onMouseOut={!isclicked ? () => setIsVisible(false) : undefined}
     >
       {children}
       {isVisible && <div className="tooltip">{props.text}</div>}
@@ -70,20 +96,19 @@ const Tooltip = ({ isclicked = false, props, children }) => {
   );
 };
 
-const Button = ({ props ,num }) => {
-  
+const Button = ({ props, num, toggleSidebar }) => {
   return (
     <Tooltip isclicked={true} props={props}>
-      <button>
-        {`button ${num}`}
-      </button>
+      <button onClick={()=>{if(num === 4){
+      toggleSidebar();
+    }}}>{`button ${num}`}</button>
     </Tooltip>
   );
 };
 
 const Hover = ({ props }) => {
   return (
-    <Tooltip isClicked={false} props={props}>
+    <Tooltip props={props}>
       <span>Hover over me</span>
     </Tooltip>
   );
