@@ -16,7 +16,7 @@ const align = [
 function App() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const toggleSidebar = () => {
-    setIsSidebarVisible((prev) => !prev);
+    setIsSidebarVisible((prev) =>!prev);
   };
 
   return (
@@ -24,9 +24,9 @@ function App() {
       {align.map((item, i) => (
         <div className="card" key={i}>
           {i % 2 === 0 ? (
-            <Button props={item} num={i} toggleSidebar={toggleSidebar} />
+            <Button data={item} num={i} toggleSidebar={toggleSidebar} />
           ) : (
-            <Hover props={item} />
+            <Hover data={item} />
           )}
         </div>
       ))}
@@ -60,7 +60,7 @@ const Sidebar = ({setIsSidebarVisible}) => {
   );
 };
 
-const Tooltip = ({ isclicked = false, props, toggleSidebar, children }) => {
+const Tooltip = ({ isclicked = false, data, toggleSidebar, children }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
 
@@ -85,20 +85,20 @@ const Tooltip = ({ isclicked = false, props, toggleSidebar, children }) => {
   return (
     <div
       ref={ref}
-      className={`tooltip-container ${props.alignment}`}
+      className={"tooltip-container"}
       onClick={isclicked ? ()=> setIsVisible((prev) => !prev) : undefined}
       onMouseOver={!isclicked ? () => setIsVisible(true) : undefined}
       onMouseOut={!isclicked ? () => setIsVisible(false) : undefined}
     >
       {children}
-      {isVisible && <div className="tooltip">{props.text}</div>}
+      {isVisible && <div className={`tooltip ${data.alignment}`}>{data.text}</div>}
     </div>
   );
 };
 
-const Button = ({ props, num, toggleSidebar }) => {
+const Button = ({ data, num, toggleSidebar }) => {
   return (
-    <Tooltip isclicked={true} props={props}>
+    <Tooltip isclicked={true} data={data}>
       <button onClick={()=>{if(num === 4){
       toggleSidebar();
     }}}>{`button ${num}`}</button>
@@ -106,9 +106,9 @@ const Button = ({ props, num, toggleSidebar }) => {
   );
 };
 
-const Hover = ({ props }) => {
+const Hover = ({ data }) => {
   return (
-    <Tooltip props={props}>
+    <Tooltip data={data}>
       <span>Hover over me</span>
     </Tooltip>
   );

@@ -50,6 +50,10 @@ span {
   cursor: pointer;
 }
 
+.tooltip-container {
+  position: absolute;
+  cursor: pointer;
+}
 .tooltip {
   position: absolute;
   background-color: black;
@@ -57,31 +61,33 @@ span {
   padding: 5px 10px;
   border-radius: 4px;
   white-space: nowrap;
+  z-index: 1000;
+}
+
+.tooltip.top {
+  bottom: 120%; 
+  left: 50%;   
   transform: translateX(-50%);
-  z-index: 1;
 }
 
-.tooltip-container.top .tooltip {
-  bottom: 125%;
-  left: 50%;
+.tooltip.bottom {
+  top: 120%;   
+  left: 50%;  
+  transform: translateX(-50%);
 }
 
-.tooltip-container.bottom .tooltip {
-  top: 125%;
-  left: 50%;
-}
-
-.tooltip-container.left .tooltip {
-  top: 50%;
-  right: 125%;
+.tooltip.left {
+  top: 50%;    
+  right: 110%; 
   transform: translateY(-50%);
 }
 
-.tooltip-container.right .tooltip {
-  top: 50%;
-  left: 125%;
+.tooltip.right {
+  top: 50%;  
+  left: 110%;  
   transform: translateY(-50%);
 }
+
 .sidebar {
   position: absolute ;
   top: 0;
