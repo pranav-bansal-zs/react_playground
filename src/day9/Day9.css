@@ -22,7 +22,7 @@
     margin-bottom: 10px;
   }
   
-  .reset_button button {
+  .reset_button .button-tags {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -33,7 +33,7 @@
     transition: background-color 0.3s ease;
   }
   
-  .reset_button button:hover {
+  .reset_button .button-tags:hover {
     background-color: #0056b3;
   }
   
@@ -43,7 +43,7 @@
     gap: 15px;
   }
   
-  .button_and_count button {
+  .button_and_count .button-tags {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
@@ -54,17 +54,17 @@
     transition: background-color 0.3s ease;
   }
   
-  .button_and_count button:hover {
+  .button_and_count .button-tags:hover {
     background-color: #218838;
   }
   
-  .button_and_count p {
+  .button_and_count .p-tags {
     margin: 0;
     font-size: 28px;
     font-weight: bold;
     color: #333;
   }
-  p{
+  .p-tags{
       background-color: #28a745;
       color:White;
       width:120px;

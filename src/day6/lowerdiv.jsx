@@ -41,7 +41,7 @@ function Lowerdiv() {
       <h1 className="theme_name">Theme: {currcolor}</h1>
       <div className="button_container">
         <div className="reset_button">
-          <button
+          <button className="button-div"
             onDoubleClick={(e) => {
               e.stopPropagation();
             }}
@@ -54,7 +54,7 @@ function Lowerdiv() {
           </button>
         </div>
         <div className="button_and_count">
-          <button
+          <button className="button-div"
             onDoubleClick={(e) => {
               e.stopPropagation();
             }}
@@ -65,10 +65,10 @@ function Lowerdiv() {
           >
             Increament
           </button>
-          <p>
+          <p className="p-tag">
             Count: {state.count}
           </p>
-          <button
+          <button className="button-div"
             onDoubleClick={(e) => {
               e.stopPropagation();
             }}
