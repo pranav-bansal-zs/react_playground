@@ -32,6 +32,7 @@ function App() {
        {/* <button className="day-button" onClick={() => setSelectedDay(11)}>
          Day 10
        </button> */}
+
        </div>
         ) 
       }
@@ -54,6 +55,7 @@ function App() {
       <div>
         {selectedDay === 11 && <Day10/>}
       </div>
+
     </div>
   );
 }
