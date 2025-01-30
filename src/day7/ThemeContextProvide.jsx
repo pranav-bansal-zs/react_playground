@@ -1,5 +1,5 @@
 import { createContext } from "react";
-
+import React from "react";
 export const ThemeContextProvider = createContext();
 
 export const ThemeContextProviderComponent = ({ children }) => {

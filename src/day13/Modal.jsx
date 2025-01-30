@@ -1,3 +1,4 @@
+import React from "react";
 import {useState} from "react";
 import './Modal.css';
 export default function Modal() {

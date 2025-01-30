@@ -1,3 +1,4 @@
+import React from "react";
 import "./Child.css";
 const Child = (props) => {
     return (
