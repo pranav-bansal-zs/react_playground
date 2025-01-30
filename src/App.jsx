@@ -10,6 +10,7 @@ import Day11_1 from './day11_part1/Day11_1';
 import Day11_2 from './day11_part2/Day11_2';
 import Day11_3 from './day11_part3/Day11_3';
 import Day12 from './day12/Day12';
+import Modal from './day13/Modal';
 function App() {
   const [selectedDay, setSelectedDay] = useState(null);
 
@@ -48,6 +49,9 @@ function App() {
        <button className="day-button" onClick={() => setSelectedDay(15)}>
          Day 12
        </button>
+       <button className="day-button" onClick={() => setSelectedDay(16)}>
+         Day 13
+       </button>
        </div>
         ) 
       }
@@ -81,6 +85,9 @@ function App() {
       </div>
       <div>
         {selectedDay === 15 && <Day12/>}
+      </div>
+      <div>
+        {selectedDay === 16 && <Modal/>}
       </div>
 
     </div>
