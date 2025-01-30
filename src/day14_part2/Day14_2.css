@@ -1,0 +1,113 @@
+.main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #b771e5;
+  height: 100vh;
+  width: 100vw;
+  gap: 5px;
+}
+
+.card-item {
+  background-color: #fffbca;
+  display: grid;
+  place-items: center;
+}
+
+.action-button {
+  background-color: #aeea94;
+  color: #4635b1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hover-text {
+  background-color: #b771e5;
+  color: #fffbca;
+  padding: 4px 8px;
+  border-radius: 12px;
+  cursor: default;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip-box {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.tooltip-box.top {
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-box.bottom {
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip-box.left {
+  top: 50%;
+  right: 110%;
+  transform: translateY(-50%);
+}
+
+.tooltip-box.right {
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+}
+
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.sidebar-modal-content {
+  width: 300px;
+  height: 100%;
+  background-color: rgb(237, 237, 222);
+  animation: slideInFromRight 0.5s ease-in-out;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#sidebar-close {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(237, 237, 222);
+}
+
+.sidebar-description {
+  padding: 20px;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
