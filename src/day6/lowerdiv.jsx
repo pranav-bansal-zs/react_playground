@@ -1,3 +1,4 @@
+import React from "react";
 import  { useReducer, useContext, useRef, useState, useEffect } from "react";
 import "./lowerdiv.css";
 import { ThemeContextProvider } from "./ThemeContextProvide";
