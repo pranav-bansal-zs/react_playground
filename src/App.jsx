@@ -4,6 +4,7 @@ import Day6 from './day6/day6';
 import Day7 from './day7/day7';
 import Button from './day8_button/Buttton';
 import Form from './day8_form/Form';
+import Day9 from './day9/Day9';
 function App() {
   const [selectedDay, setSelectedDay] = useState(null);
 
@@ -24,6 +25,9 @@ function App() {
        <button className="day-button" onClick={() => setSelectedDay(9)}>
          Day 8_Form
        </button>
+       <button className="day-button" onClick={() => setSelectedDay(10)}>
+         Day 9
+       </button>
        </div>
         ) 
       }
@@ -39,6 +43,9 @@ function App() {
       </div>
       <div>
         {selectedDay === 9 && <Form/>}
+      </div>
+      <div>
+        {selectedDay === 10 && <Day9/>}
       </div>
     </div>
   );
