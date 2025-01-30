@@ -6,6 +6,7 @@ import Button from './day8_button/Buttton';
 import Form from './day8_form/Form';
 import Day9 from './day9/Day9';
 import Day10 from './day10/Day10';
+import Day11_1 from './day11_part1/Day11_1';
 function App() {
   const [selectedDay, setSelectedDay] = useState(null);
 
@@ -32,7 +33,9 @@ function App() {
        {/* <button className="day-button" onClick={() => setSelectedDay(11)}>
          Day 10
        </button> */}
-
+      <button className="day-button" onClick={() => setSelectedDay(12)}>
+         Day 11
+       </button>
        </div>
         ) 
       }
@@ -54,6 +57,9 @@ function App() {
       </div>
       <div>
         {selectedDay === 11 && <Day10/>}
+      </div>
+      <div>
+        {selectedDay === 12 && <Day11_1/>}
       </div>
 
     </div>
