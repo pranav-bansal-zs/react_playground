@@ -1,37 +1,19 @@
-.container {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.day-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.day-button:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-}
-
-.day-button:active {
-  background-color: #003f7f;
-  transform: scale(0.95);
-}
-
-.content {
-  margin-top: 20px;
-}
-
 .button-container{
   display: flex;
   flex-direction: column;
-  gap:20px;
   align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+.day-button{
+  width: 140px;
+  height: 80px;
+  color: black;
+  font-size: 20px;
+  background-color: aqua;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.day-button:hover{
+  background-color: aquamarine;
 }

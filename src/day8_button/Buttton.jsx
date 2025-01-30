@@ -41,6 +41,7 @@ function Button() {
       <div className="button-grid">
         {[...Array(9)].map((_, index) => (
           <button
+          id="buttons"
             key={index}
             onClick={() => handleClick(index)}
             className={clickedButtons[index] ? 'color_change' : ''}

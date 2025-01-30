@@ -13,7 +13,7 @@
     justify-content: center;
   }
 
- button {
+ #buttons {
     height: 120px;
     padding: 10px 35px;
     font-size: 26px;
