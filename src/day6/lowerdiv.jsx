@@ -1,8 +1,8 @@
 import  { useReducer, useContext, useRef, useState, useEffect } from "react";
-import "./App.css";
+import "./lowerdiv.css";
 import { ThemeContextProvider } from "./ThemeContextProvide";
 
-function App() {
+function Lowerdiv() {
   const [currcolor, iscurrcolor] = useState("#FFFFFF");
   const color_change = useRef();
   const color = useContext(ThemeContextProvider);
@@ -85,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default Lowerdiv;
