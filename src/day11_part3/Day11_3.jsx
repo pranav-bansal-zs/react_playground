@@ -1,9 +1,9 @@
-import React from 'react'
-import './Day11_2.css'
+import React from 'react';
 import { useState,useRef } from 'react';
 import Child from './Child';
+import './Day11_3.css'
 
-const Day11_2 = () => {
+const Day11_3 = () => {
     const inputref=useRef();
     const [roll,setRoll] = useState(0); 
     const [error,setError]=useState("")
@@ -29,4 +29,4 @@ const Day11_2 = () => {
     );
 }
 
-export default Day11_2
+export default Day11_3
