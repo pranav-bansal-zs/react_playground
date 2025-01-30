@@ -1,0 +1,22 @@
+.main-container {
+    width: 700px;
+    height: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-content: start;
+    place-items: center;
+    border: 2px solid black;
+    padding: 20px;
+    gap: 5vmin;
+    border-radius: 10px;
+    background-color: darksalmon;
+    position: relative;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+.loader{
+    position: absolute;
+}
