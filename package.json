@@ -1,5 +1,5 @@
 {
-  "name": "react_playground",
+  "name": "dev-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -23,6 +23,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+<<<<<<<< HEAD:day8_react_button/package.json
     "vite": "^6.0.9"
+========
+    "vite": "^6.0.11"
+>>>>>>>> origin/dev:package.json
   }
 }
