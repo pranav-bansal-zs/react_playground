@@ -39,9 +39,9 @@ function App() {
        <button className="day-button" onClick={() => setSelectedDay(10)}>
          Day 9
        </button>
-       {/* <button className="day-button" onClick={() => setSelectedDay(11)}>
+       <button className="day-button" onClick={() => setSelectedDay(11)}>
          Day 10
-       </button> */}
+       </button>
       <button className="day-button" onClick={() => setSelectedDay(12)}>
          Day 11 Part-1
        </button>

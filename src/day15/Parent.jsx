@@ -7,8 +7,8 @@ function Parent() {
   const { color, toggleColor } = useContext(ThemeContext);
 
   return (
-    <div className="container">
-      <div className="main-container" style={{backgroundColor:color }}>
+    <div className="container1">
+      <div className="main-container1" style={{backgroundColor:color }}>
         <button className="switch-btn" onClick={toggleColor}>
           Switch
         </button>
