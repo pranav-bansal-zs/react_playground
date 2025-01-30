@@ -1,6 +1,7 @@
 import React from 'react'
 import Child from './Child';
 const Day10 = () => {
+
     const data = {
         image: 'https://campus.epam.com/static/news/255/self-study_03375353.png',
         title: 'React Test',

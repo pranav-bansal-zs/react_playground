@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import './Day12.css'
 const Accordion = ({ title, description }) => {

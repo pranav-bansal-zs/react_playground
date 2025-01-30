@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { useState } from 'react';
 import Day6 from './day6/day6';

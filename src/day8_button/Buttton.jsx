@@ -1,6 +1,6 @@
 import './Button.css';
 import { useState } from 'react';
-
+import React from "react";
 function Button() {
   const [count, setCount] = useState(0); 
   const [clickedButtons, setClickedButtons] = useState(Array(9).fill(false)); 
