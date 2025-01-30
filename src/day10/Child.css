@@ -1,5 +1,5 @@
 
-.main-container {
+.main-container2 {
     background-color: lightblue;
     display: flex;
     flex-direction: column;
@@ -12,7 +12,7 @@
     background-color: beige;
 }
 
-.parent-container {
+.parent-container2 {
     display: flex;
     flex-wrap: wrap;
     width: 1050px;
@@ -20,40 +20,41 @@
 }
 
 
-.image-tag {
+.image-tag2 {
+    height: 250px;
     width: 250px;
     border: 3px solid black;
     margin: 20px;
 }
 
 
-.title-description {
+.title-description2 {
     padding: 20px;
     border: 2px solid black;
     margin: 20px;
 }
 
 
-.title {
+.title2 {
     margin: 20px;
     border: 2px solid black;
     text-align: center;
 }
 
-.description {
+.description2 {
     padding: 20px;
     font-size: 15px;
     border: 2px solid black;
 }
 
 @media (max-width: 750px) {
-    .parent-container {
+    .parent-container2 {
         width: 550px;
         flex-wrap: wrap;
     }
 
-    .image-tag,
-    .title-description {
+    .image-tag2,
+    .title-description2 {
         width: 180px;
         max-width: unset;
         margin: 20px;
@@ -61,13 +62,13 @@
 }
 
 @media (max-width: 450px) {
-    .parent-container {
+    .parent-container2 {
         width: 300px;
         flex-wrap: wrap;
     }
 
-    .image-tag,
-    .title-description {
+    .image-tag2,
+    .title-description2 {
         width: 100px;
         margin: 5px;
     }
