@@ -23,6 +23,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
     "globals": "^15.14.0",
+<<<<<<< HEAD:package.json
     "vite": "^6.0.11"
+=======
+    "vite": "^6.0.9"
+>>>>>>> 9095328 (React test 20 Jan 2025 4:30 PM):day10_react_test/package.json
   }
 }

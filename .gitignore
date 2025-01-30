@@ -8,8 +8,11 @@ pnpm-debug.log*
 lerna-debug.log*
 <<<<<<<< HEAD:day11_react_test/.gitignore
 
+<<<<<<< HEAD:.gitignore
 ========
 >>>>>>>> origin/dev:.gitignore
+=======
+>>>>>>> 9095328 (React test 20 Jan 2025 4:30 PM):day10_react_test/.gitignore
 eslint.config.js
 vite.config.js
 README.md
