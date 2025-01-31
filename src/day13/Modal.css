@@ -31,10 +31,15 @@
     top:250px;
     left: 500px;
     padding: 30px;
-    animation: 1s fadeIn;
     border-radius: 6px;
   }
   
+  .fadein{
+    animation: 1s fadeIn;
+  }
+  .fadeout{
+    animation: 1s fadeOut;
+  }
   .button-close{
     position: relative;
     font-size: 30px;
@@ -49,8 +54,21 @@
   @keyframes fadeIn {
    from {
     opacity: 0;
+    transform: scale(0.9);
    }
    to {
     opacity: 1;
+    transform: scale(1);
    }
   }
+
+  @keyframes fadeOut {
+    from {
+     opacity: 1;
+     transform: scale(1);
+    }
+    to {
+     opacity: 0;
+     transform: scale(0.9);
+    }
+   }
